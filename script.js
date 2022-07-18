@@ -1,5 +1,5 @@
 const api = {
-    endpoint: "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/",
+    endpoint: "http://api.openweathermap.org/data/2.5/",
     key: "bac9ac3d98649b318d11627f2e4318ad"
 }
 
