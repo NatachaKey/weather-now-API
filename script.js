@@ -8,7 +8,7 @@ input.addEventListener("keypress", enter);
 
 function enter (e){
     if (e.keyCode === 13){
-        getInfo(input.value);
+      getInfo(input.value)
     }  
 }
 
@@ -27,25 +27,6 @@ city.textContent= `${resReceived.name}, ${resReceived.sys.country}`;
 
 getOurDate();
 
-function getOurDate(){
-
-const myDate = new Date();
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let day = days[myDate.getDay()];
-
-
-let todayDate=myDate.getDate();
-
-
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-let month = months[myDate.getMonth()];
-
-
-let year= myDate.getFullYear();
-
-
-document.querySelector("#date").innerHTML= day + " "+ todayDate + " " + month + " "+ year;
-}
 
 
 let temperature= document.querySelector("#temperature");
@@ -59,4 +40,27 @@ conditions.textContent= `${resReceived.weather[0].main}`;
 
 let variation= document.querySelector("#variation");
 variation.innerHTML="Min: " +` ${Math.round(resReceived.main.temp_min)}<span>°</span>`+ " " + "Min: " + `${Math.round(resReceived.main.temp_max)}<span>°</span>`
+}
+
+
+
+function getOurDate(){
+
+const myDate = new Date();
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  
+let day = days[myDate.getDay()];
+
+
+let todayDate=myDate.getDate();
+
+
+let month = months[myDate.getMonth()];
+
+
+let year= myDate.getFullYear();
+
+let showDate= document.querySelector("#date");
+ showDate.textContent = `${day}` + " " + `${todayDate}` + " " + `${month}` + " " + `${year}`
 }

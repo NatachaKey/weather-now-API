@@ -11,8 +11,9 @@ body {
     flex-wrap: wrap;
     background-image: linear-gradient(rgba(233, 200, 200, 0.3), rgba(0, 0, 0, 0.6));
     min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
     }
+
     #header{
         display: flex;
         justify-content: center;
