@@ -1,27 +1,62 @@
-/*
-This is your site JavaScript code - you can add interactivity and carry out processing
-- Initially the JS writes a message to the console, and moves a button you can add from the README
-*/
-
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
-
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function() {
-    // The JS works in conjunction with the 'dipped' code in style.css
-    btn.classList.toggle("dipped");
-  };
+const api = {
+    endpoint: "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/",
+    key: "bac9ac3d98649b318d11627f2e4318ad"
 }
 
-// This is a single line JS comment
-/*
-This is a comment that can span multiple lines 
-- use comments to make your own notes!
-*/
+const input= document.querySelector("#input");
+input.addEventListener("keypress", enter);
+
+function enter (e){
+    if (e.keyCode === 13){
+        getInfo(input.value);
+    }  
+}
+
+async function getInfo (data) {
+    const res = await fetch(`${api.endpoint}weather?q=${data}&units=metric&appID=${api.key}`);
+    const resReceived= await res.json();
+
+displayResult(resReceived);
+
+}
+
+function   displayResult(resReceived){
+let city= document.querySelector("#city");
+city.textContent= `${resReceived.name}, ${resReceived.sys.country}`;
+
+
+getOurDate();
+
+function getOurDate(){
+
+const myDate = new Date();
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let day = days[myDate.getDay()];
+
+
+let todayDate=myDate.getDate();
+
+
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let month = months[myDate.getMonth()];
+
+
+let year= myDate.getFullYear();
+
+
+document.querySelector("#date").innerHTML= day + " "+ todayDate + " " + month + " "+ year;
+}
+
+
+let temperature= document.querySelector("#temperature");
+temperature.innerHTML= `${Math.round(resReceived.main.temp)}<span>°</span>`;
+
+let feelsLike = document.querySelector("#feelsLike");
+feelsLike.innerHTML=` Feels like: ${Math.round(resReceived.main.feels_like)}<span>°</span>`;
+
+let conditions= document.querySelector("#conditions");
+conditions.textContent= `${resReceived.weather[0].main}`;
+
+let variation= document.querySelector("#variation");
+variation.innerHTML="Min: " +` ${Math.round(resReceived.main.temp_min)}<span>°</span>`+ " " + "Min: " + `${Math.round(resReceived.main.temp_max)}<span>°</span>`
+}
