@@ -1,3 +1,12 @@
+gsap.from("#header", {y:-300, delay:0.2, duration:3, opacity:0.5, ease:"power4.out"})
+gsap.from("#city", {y:-300, delay:1.2, duration:3, opacity:0.5, ease:"power4.out"})
+gsap.from("#date", {y:-300, delay:2.2, duration:3, opacity:0, ease:"power4.out"})
+gsap.from("#temperature", {y:-300, delay:3.2, duration:3, opacity:0, ease:"power4.out"})
+gsap.from("#feelsLike", {y:-300, delay:4.2, duration:3, opacity:0, ease:"power4.out"})
+gsap.from("#conditions", {y:-300, delay:5.2, duration:3, opacity:0, ease:"power4.out"})
+gsap.from("#variation", {y:300, delay:6.2, duration:3, opacity:0, ease:"power4.out"})
+
+
 const api = {
     endpoint: "http://api.openweathermap.org/data/2.5/",
     key: "bac9ac3d98649b318d11627f2e4318ad"
