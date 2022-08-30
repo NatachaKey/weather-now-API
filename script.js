@@ -26,6 +26,7 @@ async function getInfo (data) {
     const resReceived= await res.json();
 
 displayResult(resReceived);
+  input.value="";
 
 }
 
