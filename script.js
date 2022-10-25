@@ -46,7 +46,7 @@ let conditions= document.querySelector("#conditions");
 conditions.textContent= `${resReceived.weather[0].main}`;
 
 let variation= document.querySelector("#variation");
-variation.innerHTML="Min: " +` ${Math.round(resReceived.main.temp_min)}<span>°</span>`+ " " + "Min: " + `${Math.round(resReceived.main.temp_max)}<span>°</span>`
+variation.innerHTML="Min: " +` ${Math.round(resReceived.main.temp_min)}<span>°</span>`+ " " + "Min: " + `${Math.round(resReceived.main.temp_max)}<span>°</span>`;
 }
 
 function getOurDate(){
@@ -67,5 +67,5 @@ let month = months[myDate.getMonth()];
 let year= myDate.getFullYear();
 
 let showDate= document.querySelector("#date");
- showDate.textContent = `${day}` + " " + `${todayDate}` + " " + `${month}` + " " + `${year}`
+ showDate.textContent = `${day}` + " " + `${todayDate}` + " " + `${month}` + " " + `${year}`;
 }
