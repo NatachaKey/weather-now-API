@@ -1,82 +1,71 @@
 body {
-    background-image: url("https://images.unsplash.com/photo-1610043238036-7309f1cc52d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"); 
-        background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-  background-color: #4b4b4b;
-    }
-    
-    #container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-image: linear-gradient(rgba(233, 200, 200, 0.3), rgba(0, 0, 0, 0.6));
-    min-height: 100vh;
-  font-family: 'Roboto', sans-serif;
-    }
-
-    #header{
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-    }
-    #input {
-        background-color: rgba(142, 127, 161, 0.3);
-        border-radius: 20px;
-        border: 3px solid #CDf3A2;
-        padding: 15px;
-        font-size: 20px;
-        }
-    #input:focus{
-        background-color: #fff;
-    }
-
-    #when-where{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-
-    #city{
-        color: #fff;
-        font-size: 45px;
-    }
-
-    #date{
-        color: #fff;
-        font-size: 24px;
-    }
-
-    #now{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #temperature{
-        color: #fff;
-        font-size: 110px;
-        font-weight: bold;
-        text-shadow: 2px 2px 8px #CDf3A2;
-        margin: 0;
-    }
-
-    #feelsLike{
-        color: #fff;
-        font-size: 30px;
-        font-weight: bold;
-    }
-
-    #conditions{
-        color: #fff;
-        font-size: 32px;
-        font-weight: bold;
-        font-style: italic;
-    }
-    #variation{
-        color: #fff;
-        font-size: 26px;
-        font-weight: bold;
-    }
+     background-image: url("https://images.unsplash.com/photo-1610043238036-7309f1cc52d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+     background-size: cover;
+     background-repeat: no-repeat;
+     margin: 0;
+     background-color: #4b4b4b;
+}
+ #container {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     background-image: linear-gradient(rgba(233, 200, 200, 0.3), rgba(0, 0, 0, 0.6));
+     min-height: 100vh;
+     font-family: 'Roboto', sans-serif;
+}
+ #header{
+     display: flex;
+     justify-content: center;
+     margin-top: 30px;
+}
+ #input {
+     background-color: rgba(142, 127, 161, 0.3);
+     border-radius: 20px;
+     border: 3px solid #CDf3A2;
+     padding: 15px;
+     font-size: 20px;
+}
+ #input:focus{
+     background-color: #fff;
+}
+ #when-where{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+ #city{
+     color: #fff;
+     font-size: 45px;
+}
+ #date{
+     color: #fff;
+     font-size: 24px;
+}
+ #now{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+ #temperature{
+     color: #fff;
+     font-size: 110px;
+     font-weight: bold;
+     text-shadow: 2px 2px 8px #CDf3A2;
+     margin: 0;
+}
+ #feelsLike{
+     color: #fff;
+     font-size: 30px;
+     font-weight: bold;
+}
+ #conditions{
+     color: #fff;
+     font-size: 32px;
+     font-weight: bold;
+     font-style: italic;
+}
+ #variation{
+     color: #fff;
+     font-size: 26px;
+     font-weight: bold;
+}
