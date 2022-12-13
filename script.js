@@ -12,6 +12,15 @@ const api = {
     key: "bac9ac3d98649b318d11627f2e4318ad"
 }
 
+getApiGeolocation();
+
+async function getApiGeolocation() { 
+    const resGeolocation = await fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=b1195a0d717b4bb88763fce48faf455a`);
+    const resultGeolocation = await resGeolocation.json(); 
+    getInfo(resultGeolocation.city);
+}
+
+
 const input= document.querySelector("#input");
 input.addEventListener("keypress", enter);
 
