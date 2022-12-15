@@ -6,7 +6,6 @@ gsap.from("#feelsLike", {y:-300, delay:4.2, duration:3, opacity:0, ease:"power4.
 gsap.from("#conditions", {y:-300, delay:5.2, duration:3, opacity:0, ease:"power4.out"});
 gsap.from("#variation", {y:300, delay:6.2, duration:3, opacity:0, ease:"power4.out"});
 
-
 const api = {
     endpoint: "http://api.openweathermap.org/data/2.5/",
     key: "bac9ac3d98649b318d11627f2e4318ad"
@@ -19,7 +18,6 @@ async function getApiGeolocation() {
     const resultGeolocation = await resGeolocation.json(); 
     getInfo(resultGeolocation.city);
 }
-
 
 const input= document.querySelector("#input");
 input.addEventListener("keypress", enter);
@@ -66,12 +64,9 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
   
 let day = days[myDate.getDay()];
 
-
 let todayDate=myDate.getDate();
 
-
 let month = months[myDate.getMonth()];
-
 
 let year= myDate.getFullYear();
 
