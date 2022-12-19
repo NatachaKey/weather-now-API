@@ -54,6 +54,9 @@ conditions.textContent= `${resReceived.weather[0].main}`;
 
 let variation= document.querySelector("#variation");
 variation.innerHTML="Min: " +` ${Math.round(resReceived.main.temp_min)}<span>°</span>`+ " " + "Min: " + `${Math.round(resReceived.main.temp_max)}<span>°</span>`;
+
+//  fetch  random background:
+// document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + resReceived.name + "')"
 }
 
 function getOurDate(){
